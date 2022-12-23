@@ -1,6 +1,6 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-int[] array = new int[10];
+float[] array = new float[10];
 array[0] = new Random().Next(0, 1000);
 Console.Write("[" + array[0]);
 for (int i = 1; i < array.Length; i++)
@@ -10,8 +10,8 @@ for (int i = 1; i < array.Length; i++)
 }
 Console.Write("]");
 Console.WriteLine("");
-int max = 0;
-int min = 1000;
+double max = 0;
+double min = 1000;
 for (int i = 0; i < array.Length; i++)
 {
     if (array[i] > max)
@@ -23,5 +23,5 @@ for (int i = 0; i < array.Length; i++)
         min = array[i];
     }
 }
-int diff = max - min;
+double diff = max - min;
 Console.Write("Difference between max and min: " + diff);
