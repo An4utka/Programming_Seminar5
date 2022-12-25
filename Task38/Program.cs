@@ -1,17 +1,19 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-float[] array = new float[10];
-array[0] = new Random().Next(0, 1000);
+double [] array = new double[10];
+double num0 = new Random().Next(0, 100) + new Random().NextDouble();
+array[0] = Math.Round(num0, 2);
 Console.Write("[" + array[0]);
 for (int i = 1; i < array.Length; i++)
 {
-    array[i] = new Random().Next(100, 1000);
+    double num = new Random().Next(0, 100) + new Random().NextDouble();
+    array[i] = Math.Round(num, 2);
     Console.Write(", " + array[i]);
 }
 Console.Write("]");
 Console.WriteLine("");
-double max = 0;
-double min = 1000;
+double max = array[0];
+double min = array[0];
 for (int i = 0; i < array.Length; i++)
 {
     if (array[i] > max)
